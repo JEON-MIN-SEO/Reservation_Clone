@@ -4,6 +4,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/reservations")
-public class API_ReservationController {
+@RequestMapping("/admin")
+public class API_AdminController {
 }
