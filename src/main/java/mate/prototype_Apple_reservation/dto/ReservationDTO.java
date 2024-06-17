@@ -1,7 +1,11 @@
 package mate.prototype_Apple_reservation.dto;
 
 import lombok.*;
-import org.antlr.v4.runtime.misc.NotNull;
+import mate.prototype_Apple_reservation.enums.MealType;
+import mate.prototype_Apple_reservation.enums.ReservationType;
+
+import javax.validation.constraints.NotNull;
+
 
 import java.time.LocalDate;
 import java.time.LocalTime;
