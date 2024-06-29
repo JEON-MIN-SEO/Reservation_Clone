@@ -11,4 +11,5 @@ public class AdminDTO {
     private Long adminId;
     private String name;
     private int password;
+    private String memo;
 }
