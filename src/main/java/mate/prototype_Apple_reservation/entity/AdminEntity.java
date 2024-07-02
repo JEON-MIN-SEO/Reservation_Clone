@@ -6,11 +6,11 @@ import jakarta.persistence.*;
 public class AdminEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long elderlyId;
+    private Long adminId;
 
     @Column(nullable = false)
     private String name;
 
     @Column(nullable = false)
-    private int floor;
+    private int password;
 }
