@@ -13,4 +13,7 @@ public class AdminEntity {
 
     @Column(nullable = false)
     private int password;
+
+    @Column
+    private String memo;
 }
