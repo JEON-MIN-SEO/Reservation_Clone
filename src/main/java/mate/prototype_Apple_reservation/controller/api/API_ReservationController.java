@@ -1,8 +1,8 @@
 package mate.prototype_Apple_reservation.controller.api;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import jakarta.validation.Valid;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -14,6 +14,14 @@ public class API_ReservationController {
     @GetMapping
     public List<ElderlyDTO> getAllElderly() {
         return elderlyService.findAll();
+    }
+
+    // 입소자 명부 추가
+    // http://localhost:8080/elderly
+    @PostMapping
+    public ResponseEntity<Void> createElderly(@Valid @RequestBody ElderlyDTO elderly) {
+        elderlyService.save(elderly);
+        return ResponseEntity.ok().build();
     }
 
 }
